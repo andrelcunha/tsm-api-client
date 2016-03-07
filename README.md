@@ -22,20 +22,20 @@ See also: \__main__ in tsm/tsm_api_client.py
         ll = 'test.txt'
         
         client.connect()
-        info = tsm_api_client.query_session_info()
+        info = client.query_session_info()
         logging.info('session info: {0}'.format(convert_tsm_structure_to_str(info)))
-        tsm_api_client.archive(filename=filename,
+        client.archive(filename=filename,
                                filespace=filespace,
                                highlevel=hl,
                                lowlevel=ll)
         dest = '/tmp/test_retrieve.txt'
-        tsm_api_client.retrieve(dest_file=dest,
+        client.retrieve(dest_file=dest,
                                 filespace=filespace,
                                 highlevel=hl,
                                 lowlevel=ll)
     except Exception as err:
-        tsm_api_client.close()
+        client.close()
         logging.exception(err.message)
         logging.error(err.message)
     finally:
-        tsm_api_client.close()
+        client.close()
