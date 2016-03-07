@@ -1,12 +1,14 @@
 # tsm-api-client
 
-A ctypes python wrapper for the IBM Spectrum Protect (formerly Tivoli Storage Manager) API. 
+A ctypes python wrapper for the IBM Spectrum Protect (formerly Tivoli Storage Manager) API. TSM can be used as a low 
+cost object storage backend in case long access/retrieval time does not matter.
 
-Caution: This code is not fully tested.
+Caution: This code is not fully tested. Improvements are welcome.
 
 # Requirements
 
-The API requires a pre installed TSM Client [1] and expects a pre defined dsm.opt file in: /opt/tivoli/tsm/client/ba/bin/dsm.opt
+* Python 2.7
+* A pre installed TSM Client [1] and expects a pre defined dsm.opt file in: /opt/tivoli/tsm/client/ba/bin/dsm.opt
 
 [1] https://www.ibm.com/support/knowledgecenter/SSGSG7_7.1.1/com.ibm.itsm.client.doc/t_inst_linuxx86client.html%23t_inst_linuxx86client
 
